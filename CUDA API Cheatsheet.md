@@ -1,7 +1,8 @@
 ### Sauce: https://docs.nvidia.com/cuda/cuda-runtime-api/index.html & slides
 
 ### Image for reference
- ![[Pasted image 20250116210725.png]]
+![Pasted image 20250116210725](https://github.com/user-attachments/assets/6a44ded7-225a-4f09-86c6-59de15d9ad01)
+
 
 # CUDA API
 ## CUDA API memory functions
@@ -37,7 +38,7 @@
 	- `size_t count`
 		- The number of bytes to copy
 	- `cudaMemcpyKind kind`
-		- The type of transfer to do ([[CUDA API Cheatsheet#`enum cudaMemcpyKind`|enum definition]])
+		- The type of transfer to do
 - Return `curaError_t`
 	- `cudaSuccess`
 	- `cudaErrorInvalidValue`
@@ -68,7 +69,7 @@ General format of invocation & configuration:
 `KernelFunction<<<Dg, Db, Ns, S>>>(...args...)`
 - The kernel function is generally **whatever function each "thread" is going to run**
 - The above configuration is how we tell the GPU the dimension of the grid and blocks that will be used to execute the function on the device itself
-- ### [[CUDA API Cheatsheet#Blocks, Grids, Threads|Block, Grid, etc. explanation]]
+- ### REFER TO THE ENUM TABLE BELOW!!
 - Config Parameters:
 	- `Dg` 
 		- Of type `dim3`
@@ -116,7 +117,8 @@ Welcome to the really boring shit
 ### [CUDA Refresher](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
 - If you don't get any of the terminology go there ^
 ## Blocks, Grids, Threads
-![[gpus-in-blocks-625x203.png]]
+![gpus-in-blocks-625x203](https://github.com/user-attachments/assets/1fa8980e-87e1-46f2-a867-0165a3008518)
+
 *note, the squiggly lines in each block is a thread, if that isn't obvious*
 - A group of **threads** is called a **CUDA block**
 - **CUDA blocks** are grouped into a **grid**
