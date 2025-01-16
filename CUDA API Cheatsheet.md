@@ -69,7 +69,7 @@ General format of invocation & configuration:
 `KernelFunction<<<Dg, Db, Ns, S>>>(...args...)`
 - The kernel function is generally **whatever function each "thread" is going to run**
 - The above configuration is how we tell the GPU the dimension of the grid and blocks that will be used to execute the function on the device itself
-- ### REFER TO THE ENUM TABLE BELOW!!
+- ### REFER TO EXPLANANTION ON BLOCKS, GRIDS & THREADS BELOW!!
 - Config Parameters:
 	- `Dg` 
 		- Of type `dim3`
